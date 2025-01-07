@@ -1,0 +1,25 @@
+
+:root {
+    --heading-footer-bgcolor: #9B287B;
+    --heading-font-family: "calistoga" , sans-serif;
+    --body-font-family: "Roboto",sans-serif;
+    --top-nav-bgcolor: #696773;
+}
+
+*{
+    margin: 0 auto;
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font-family);
+    font-weight: 100;
+}
+
+
+
+h1, h2, h3 {
+    font-family:var(--heading-font-family);
+}
+
