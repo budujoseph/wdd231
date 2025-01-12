@@ -26,7 +26,7 @@ body {
 header {
     background-color: var(--heading-footer-bgcolor);
     display: flex;
-    padding: 0.9em;
+    padding: 5px;
     align-items: center;
     margin-bottom: .5rem;
     width: 100%;
@@ -76,11 +76,15 @@ header nav::before{
     content: "☰";
     color: white;
     font-size: 2em;
-    padding: 20px;
+    padding: 8px;
 
 }
 
-header nav .show::before{
+.top-navs a.active{
+    text-decoration: underline;
+}
+
+header nav.show::before{
     content: "❌";
     font-size: 2em;
 }
@@ -95,7 +99,7 @@ h2 {
     text-align: center;
 }
 
-main {
+.course-place {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
@@ -103,7 +107,8 @@ main {
 
 .course-sec h2 {
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 6px 6px 0 0;
+    width: 100%;
 }
 
 .empty-list {
@@ -117,7 +122,7 @@ main {
 
 .place-sec h2 {
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 6px 6px 0 0;
     margin-bottom: .5em;
 }
 
@@ -133,17 +138,107 @@ figcaption {
 
 .program-sec {
     margin-top: 1.5em;
+    margin-bottom: .9em;
 }
 
 .program-sec h2 {
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 6px 6px 0 0;
+}
+
+.filter-buttons {
+    text-align: center;
+    padding: .9rem;
+}
+
+.filter-buttons button {
+    text-align: center;
+    background-color: rgb(208, 160, 70);
+    padding: 8px;
+    width: 5em;
+    border-radius: 5px;
+    width:8em;
+    border: none;
+}
+
+.program-sec p {
+    text-align: center;
+    padding: 5px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.course-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.completed-course {
+    background-color: #101111;
+    color: white;
+}
+
+#courses-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+}
+
+.filter-buttons button.active {
+    background-color: #00FFFF;
+    color: black;
+}
+
+.course-info {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    background-color: lightgrey;
+}
+
+.course-info p {
+    font-family: var(--body-font-family);
+    text-align: left;
+    padding: 10px;
+}
+
+
+footer  {
+    text-align: center;
+    background-color: var(--heading-footer-bgcolor);
+    padding: 20px;
+}
+
+footer p {
+    color: white;
+    font-size: 18px;
+}
+
+.country-flag {
+    display: flex;
+    align-items: center;
+    max-width: 30em;
     width: 100%;
+}
+
+#lastModified {
+    padding: 10px;
 }
 
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
     header {
         display: flex;
         flex-direction: column;
@@ -169,6 +264,11 @@ figcaption {
         padding: 10px;
     }
 
+    .top-navs a.active{
+        color: rgb(8, 214, 237);
+        text-decoration: none;
+    }
+
     .top-navs ul li a {
         font-size: 1.2rem;
         font-weight: 700;
@@ -188,7 +288,7 @@ figcaption {
         grid-template-columns: 1fr 1fr 1fr;
         flex-wrap: wrap;
         flex-grow: 1;
-        gap: 4rem;
+        gap: 2rem;
     }
 
     .course-sec {
@@ -197,11 +297,35 @@ figcaption {
         flex-wrap: wrap;
         flex-grow: 1;
         grid-column: 1/3;
+        border-radius: 6px 6px 0 0;
+        margin-left: 2rem;
     }
 
     .place-sec {
         box-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
         grid-column: 3/4;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .program-sec h2 {
+        max-width: 38.2em;
+        width: 100%;
+    }
+
+    .courses-nav ul {
+        max-width: 30em;
+        width: 100%;
+    }
+
+    #courses-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        flex-grow: 1;
+    }
+
+    .course-info {
+        grid-column: 1/4;
     }
 
     

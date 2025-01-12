@@ -21,7 +21,7 @@
         </div>
         <nav class="top-navs">
             <ul class="top-nav-list">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#">Chamber</a></li>
                 <li><a href="https://github.com/budujoseph">GitHub Profile</a></li>
                 <li><a href="www.linkedin.com/in/joseph-budu-8894a1192">LinkedIn</a></li>
@@ -49,19 +49,20 @@
         </div>
         <section class="program-sec">
             <h2>Web and Computer Programming Certificate</h2>
-            <nav class="courses-nav">
-                <ul>
-                    <li id="all"><a href="#">All</a></li>
-                    <li id="cse"><a href="#">CSE</a></li>
-                    <li id="WDD"><a href="#">WDD</a></li>
-                </ul>
-            </nav>
-            <div id="my-courses"></div>
+            <div class="filter-buttons">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="cse">CSE</button>
+                <button data-filter="wdd">WDD</button>
+            </div>
+            <p>Total number of course listed below is: <span id="total-credits">0</span></p>
+            <div id="courses-container"></div>
+            <div id="course-info-container"></div>
         </section>
     </main>
     <footer>
-        <p>
-            © 2024 🌴 Joseph Budu Larbi 🌴 Accra - Ghana
+        <p class="country-flag">
+            © 2024 🌴 Joseph Budu Larbi 🌴Ghana
+            <img src="images/ghana-flag.webp" alt="flag of ghana" loading="lazy" width="80" height="50">
             <span id="currentYear"></span> 
         </p>
         <p id="lastModified"></p>
