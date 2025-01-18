@@ -1,0 +1,68 @@
+{
+    "members": [
+      {
+        "name": "Tech Innovators Inc.",
+        "address": "123 Silicon Valley, CA",
+        "phone": "123-456-7890",
+        "website": "https://techinnovators.com",
+        "imageURL": "tech_innovators_logo.png",
+        "membership_level": 3,
+        "description": "Leading in technology solutions and innovation."
+      },
+      {
+        "name": "Green Earth LLC",
+        "address": "456 Greenway Blvd, Seattle, WA",
+        "phone": "234-567-8901",
+        "website": "https://greenearth.com",
+        "imageURL": "green_earth_logo.png",
+        "membership_level": 2,
+        "description": "Eco-friendly products and sustainable practices."
+      },
+      {
+        "name": "Urban Eats",
+        "address": "789 Culinary Street, Austin, TX",
+        "phone": "345-678-9012",
+        "website": "https://urbaneats.com",
+        "imageURL": "urban_eats_logo.png",
+        "membership_level": 1,
+        "description": "Delivering delicious meals to your doorstep."
+      },
+      {
+        "name": "Fitness Pro Gym",
+        "address": "321 Workout Ave, Miami, FL",
+        "phone": "456-789-0123",
+        "website": "https://fitnesspro.com",
+        "image": "fitness_pro_logo.png",
+        "membership_level": 3,
+        "description": "State-of-the-art gym and fitness services."
+      },
+      {
+        "name": "Smart Finance Co.",
+        "address": "654 Wall Street, New York, NY",
+        "phone": "567-890-1234",
+        "website": "https://smartfinance.com",
+        "image": "smart_finance_logo.png",
+        "membership_level": 2,
+        "description": "Financial services and consulting."
+      },
+      {
+        "name": "Artistic Visions Studio",
+        "address": "987 Creative Lane, Los Angeles, CA",
+        "phone": "678-901-2345",
+        "website": "https://artisticvisions.com",
+        "image": "artistic_visions_logo.png",
+        "membership_level": 1,
+        "description": "Creative design and digital artwork services."
+      },
+      {
+        "name": "Bright Minds Education",
+        "address": "159 Learning Road, Boston, MA",
+        "phone": "789-012-3456",
+        "website": "https://brightmindsedu.com",
+        "image": "bright_minds_logo.png",
+        "membership_level": 2,
+        "description": "Innovative learning and tutoring solutions."
+      }
+    ]
+  }
+  

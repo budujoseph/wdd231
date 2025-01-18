@@ -1,0 +1,44 @@
+
+    {
+        "family_name": "Budu",
+        "date_moved_in": "1985-03-11",
+        "number_of_people": 7,
+        "visited_by_bishop": true,
+        "individual_family_members":[{
+            "name": "Edward Larbi Budu",
+            "gender": "male",
+            "birth_date": "1957-03-11"
+        },
+        {
+            "name": "Mary Budu Adumea",
+            "gender": "female",
+            "birth_date": "1962-03-11"
+        },
+        {
+            "name": "Isaac Yeboah Budu",
+            "gender": "male",
+            "birth_date": "1984-03-11"
+        },
+        {
+            "name": "Doris Budu",
+            "gender": "female",
+            "birth_date": "1986-03-11"
+        },
+        {
+            "name": "Linda Budu",
+            "gender": "female",
+            "birth_date": "1988-03-11"
+        },
+        {
+            "name": "Ernest Budu Larbi",
+            "gender": "male",
+            "birth_date": "1990-03-11"
+        },
+        {
+            "name": "Joseph Budu Larbi",
+            "gender": "male",
+            "birth_date": "1980-03-11"
+        }
+    ]
+
+    }

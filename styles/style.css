@@ -73,7 +73,7 @@ header nav ul li a:hover{
 }
 
 header nav::before{
-    content: "☰";
+    content: "\2630";
     color: white;
     font-size: 2em;
     padding: 8px;
