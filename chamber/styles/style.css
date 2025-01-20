@@ -1,12 +1,265 @@
+:root {
+    --headers-font: "Montserrat", serif;
+    --body-text-font: "Roboto", sans-serif;
+}
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-html {
+body {
     background-color: #fdf7ff;
     color: #090c9b;
+    font-family: var(--body-text-font);
+    font-weight: 400;
 }
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--headers-font);
+}
+
+header {
+    background-color: #998;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #000;
+}
+
+
+
+h1 {
+    font-weight: 100;
+    font-size: 25px;
+    max-width: 200px;
+    width: 100%;
+    margin-top: -.1em;
+}
+
+header span {
+    font-size: 18px;
+}
+
+
+nav {
+    background-color: aqua;
+    padding: 10px;
+}
+
+#grid-button,
+#list-button {
+    cursor: pointer;
+}
+
+#trygram {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
+}
+
+ul.menu-navs li a {
+    display: block;
+    padding: .75rem 2vw;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+
+a.active {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+ul.menu-navs {
+    display: none;
+    list-style-type: none;
+}
+
+#trygram::before {
+    content: "\2630";
+    color: white;
+}
+
+#trygram.show::before {
+    content: "X";
+    color: white;
+}
+
+ul.show {
+    display: block;
+}
+
+ul.menu-navs li a:hover {
+    background-color: rgb(142, 113, 113, 0.4);
+    border-radius: 5px;
+}
+
 
 
 h2 {
-    background-color: #998ab4;
+    padding: 10px;
+    font-size: 30px;
+    margin-top: 2rem;
 }
 
+.display-type {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.display-type button {
+    padding: .5rem 3vw;
+    align-items: center;
+    border: none;
+    background-color: #998;
+    border-radius: 5px;
+
+}
+
+#grid-button {
+    margin-right: 3rem;
+}
+
+#business-cards {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+#business-cards.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+
+.list-view .business {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: rgb(238, 241, 245);
+    border: 1px solid rgb(204, 202, 202);
+    margin-bottom: 2rem;
+    width: 80%;
+}
+
+#business-card.list-view .business {
+    
+    margin-bottom: 2rem;
+}
+
+#business-cards.list-view .business img {
+    display: none;
+}
+
+
+.business {
+    border-radius: 8px;
+    background-color: rgb(238, 241, 245);
+    margin: 0 auto;
+    border: 1px solid rgb(204, 202, 202);
+}
+
+
+.business h3,
+address,
+p,
+a {
+    padding: 5px;
+}
+
+.business a {
+    font-size: 20px;
+    color: black;
+    padding: .25rem 2vw;
+}
+
+.business a:hover {
+    color: red;
+}
+
+    
+footer {
+    background-color: #998;
+    padding: 15px;
+    color: #000;
+}
+
+.social-media a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.social-media {
+    padding: 20px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 40rem) {
+
+
+    #trygram {
+        display: none;
+
+    }
+
+    ul.menu-navs,
+    ul.menu-navs.show {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+
+    }
+
+    ul.menu-navs li a:hover {
+        background-color: rgb(142, 113, 113, 0.4);
+        border-radius: 5px;
+    }
+
+    #business-cards {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #business-cards.list-view {
+        display: block;
+        width: 100%;
+        /* text-align: left; */
+    }
+
+
+
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .social-media {
+        margin-top: .7em;
+    }
+}
