@@ -30,6 +30,7 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     color: #000;
     height: 100px;
+    gap: 1.8rem;
 }
 
 
@@ -44,9 +45,6 @@ h1 {
     padding-top: 10px;
 }
 
-header span {
-    font-size: 18px;
-}
 
 
 nav {
