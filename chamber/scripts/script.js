@@ -46,7 +46,7 @@ const businessCards = document.getElementById('business-cards');
 async function getMemberData() {
     const response = await fetch(jsonFilePath);
     const data = await response.json();
-    console.log(data.members);
+    // console.log(data.members);
     displayMemebrs(data.members);
 }
 
@@ -66,7 +66,7 @@ const displayMemebrs = (members) => {
 
         img.setAttribute('src', member.imageURL);
         img.setAttribute('alt', `Picture of ${member.name}`);
-        // img.setAttribute('loading', 'lazy');
+        img.setAttribute('loading', 'lazy');
         img.setAttribute('width', '300');
         img.setAttribute('height', '180');
 
