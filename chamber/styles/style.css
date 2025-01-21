@@ -29,14 +29,15 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: #000;
+    height: 100px;
 }
 
 
 
 h1 {
-    font-weight: 100;
+    font-weight: 700;
     font-size: 25px;
-    max-width: 200px;
+    /* max-width: 200px; */
     width: 100%;
     margin-top: 0;
     line-height: 1.2;
@@ -183,6 +184,10 @@ h2 {
     display: none;
 }
 
+#business-card .business img {
+    width: 90%;
+}
+
 
 .business {
     border-radius: 8px;
@@ -231,6 +236,18 @@ footer {
 
 
 @media screen and (min-width: 40rem) {
+
+    header {
+        display: grid;
+        grid-template-columns: 200px auto;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem
+    }
+
+    header img {
+        text-align: center;
+    }
 
 
     h1 {
