@@ -72,7 +72,7 @@ const displayMemebrs = (members) => {
 
         businessName.textContent = `${member.name}`;
         address.textContent = `${member.address}`;
-        website.innerHTML = `<a href = ${member.website}>Website</a>`;
+        website.innerHTML = `<a href= ${member.website}>Website</a>`;
         phone.textContent = `${member.phone}`
         level.textContent = ` Level: ${member.membership_level}`;
 
