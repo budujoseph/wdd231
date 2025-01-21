@@ -84,7 +84,6 @@ a.active {
 }
 
 ul.menu-navs {
-    display: none;
     list-style-type: none;
 }
 
@@ -98,8 +97,17 @@ ul.menu-navs {
     color: white;
 }
 
-ul.show {
-    display: block;
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul{overflow: hidden;}
+
+nav.show {
+    grid-template-rows: 1fr;
+
 }
 
 ul.menu-navs li a:hover {
@@ -113,6 +121,7 @@ h2 {
     padding: 10px;
     font-size: 30px;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .display-type {
@@ -238,7 +247,10 @@ footer {
         display: flex;
         justify-content: center;
         gap: 4rem;
+    }
 
+    nav {
+        grid-template-rows: 1fr;
     }
 
     ul.menu-navs li a:hover {
@@ -257,7 +269,6 @@ footer {
     #business-cards.list-view {
         display: block;
         width: 100%;
-        /* text-align: left; */
     }
 
 

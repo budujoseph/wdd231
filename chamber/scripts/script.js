@@ -4,7 +4,7 @@ const lastModified = document.lastModified;
 document.getElementById('lastModified').textContent = `Last Update: ${lastModified}`;
 
 const hamburger = document.getElementById('trygram');
-const menuLinks = document.querySelector('.menu-navs');
+const menuLinks = document.querySelector('#nav-animation');
 
 hamburger.addEventListener('click', () => {
     menuLinks.classList.toggle('show');
@@ -27,6 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
         businessCards.classList.add('list-view')
     });
 });
+
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+    if(link.href.includes(activePage)){
+        link.classList.add('active');
+    }
+})
 
 
 
