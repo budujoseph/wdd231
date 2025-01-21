@@ -184,9 +184,6 @@ h2 {
     display: none;
 }
 
-#business-card .business img {
-    width: 90%;
-}
 
 
 .business {
@@ -242,7 +239,9 @@ footer {
         grid-template-columns: 200px auto;
         justify-content: center;
         align-items: center;
-        gap: 2rem
+        gap: 2rem;
+        flex-grow: 1;
+        height: auto;
     }
 
     header img {
