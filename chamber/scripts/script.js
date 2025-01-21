@@ -67,7 +67,7 @@ const displayMemebrs = (members) => {
         img.setAttribute('src', member.imageURL);
         img.setAttribute('alt', `Picture of ${member.name}`);
         // img.setAttribute('loading', 'lazy');
-        img.setAttribute('width', '300');
+        img.setAttribute('width', '270');
         img.setAttribute('height', '180');
 
         businessName.textContent = `${member.name}`;
