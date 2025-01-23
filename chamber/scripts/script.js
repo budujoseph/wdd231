@@ -103,14 +103,14 @@ async function apiFetch() {
         const response = await fetch(url);
         if (response.ok) {
             let data = await response.json();
-            console.log(data.list);
+            console.log(data);
             dislayCurrentWeather(data);
         } else {
             throw Error(await response.text());
             
         }
     } catch (error) {
-        console.error(err);
+        console.error(error);
         
     }
 }
