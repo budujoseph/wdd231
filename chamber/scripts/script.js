@@ -89,3 +89,62 @@ const displayMemebrs = (members) => {
 
 getMemberData();
 
+// homepage scripts
+
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=5.86&lon=-0.67&units=metric&appid=81b5e2c74822f8180b695cd8afd4aff1';
+
+const iconImg = document.getElementById('iconImg');
+const iconDescrip = document.getElementById('icon-descrip');
+const currentWeatherContainer = document.getElementById('current-info');
+const forcastContainer = document.getElementById('forcast-info');
+
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            let data = await response.json();
+            console.log(data.list);
+            dislayCurrentWeather(data);
+        } else {
+            throw Error(await response.text());
+            
+        }
+    } catch (error) {
+        console.error(err);
+        
+    }
+}
+
+function dislayCurrentWeather(data) {
+    const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    iconImg.setAttribute('src', iconSrc);
+    iconImg.setAttribute('alt', 'Weather Icon Image');
+    iconDescrip.innerHTML = data.weather[0].description;
+
+    const tempPara = document.createElement('p');
+    const humidityPara = document.createElement('p');
+    const sunrisePara = document.createElement('p');
+    const sunsetPara = document.createElement('p');
+
+    const sunriseTimeStamp = data.sys.sunrise;
+    const sunriseDate = new Date (sunriseTimeStamp * 1000);
+    const sunriseToUTC = sunriseDate.toTimeString().split(' ')[0];
+
+    const sunsetTimeStamp = data.sys.sunset;
+    const sunsetDate = new Date(sunsetTimeStamp * 1000);
+    const sunsetToUTC = sunsetDate.toTimeString().split(' ')[0];
+
+
+    tempPara.innerHTML = `${data.main.temp}&deg C`;
+    humidityPara.textContent = `Humidity: ${data.main.humidity}%`;
+    sunrisePara.textContent = `Sunrise: ${sunriseToUTC} AM`;
+    sunsetPara.textContent = `Sunset: ${sunsetToUTC} PM`;
+
+    currentWeatherContainer.appendChild(tempPara);
+    currentWeatherContainer.appendChild(humidityPara);
+    currentWeatherContainer.appendChild(sunrisePara);
+    currentWeatherContainer.appendChild(sunsetPara);
+    
+}
+
+apiFetch();
