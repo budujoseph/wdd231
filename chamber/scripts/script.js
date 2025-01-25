@@ -46,12 +46,13 @@ const businessCards = document.getElementById('business-cards');
 async function getMemberData() {
     const response = await fetch(jsonFilePath);
     const data = await response.json();
-    // console.log(data.members);
-    displayMemebrs(data.members);
+    console.log(data.members);
+    displaySpotlights(data.members);
+    displayMembers(data.members);
 }
 
 
-const displayMemebrs = (members) => {
+const displayMembers = (members) => {
     members.forEach((member) => {
 
         let card = document.createElement('section');
@@ -72,7 +73,7 @@ const displayMemebrs = (members) => {
 
         businessName.textContent = `${member.name}`;
         address.textContent = `${member.address}`;
-        website.innerHTML = `<a href= ${member.website}>Website</a>`;
+        website.innerHTML = `<a href= ${member.website} target="_blank">Website</a>`;
         phone.textContent = `${member.phone}`
         level.textContent = ` Level: ${member.membership_level}`;
 
@@ -128,17 +129,17 @@ function dislayCurrentWeather(data) {
 
     const sunriseTimeStamp = data.sys.sunrise;
     const sunriseDate = new Date (sunriseTimeStamp * 1000);
-    const sunriseToUTC = sunriseDate.toTimeString().split(' ')[0];
+    const sunriseToUTC = sunriseDate.toLocaleTimeString();
 
     const sunsetTimeStamp = data.sys.sunset;
     const sunsetDate = new Date(sunsetTimeStamp * 1000);
-    const sunsetToUTC = sunsetDate.toTimeString().split(' ')[0];
+    const sunsetToUTC = sunsetDate.toLocaleTimeString();
 
 
     tempPara.innerHTML = `${data.main.temp}&deg C`;
     humidityPara.textContent = `Humidity: ${data.main.humidity}%`;
-    sunrisePara.textContent = `Sunrise: ${sunriseToUTC} AM`;
-    sunsetPara.textContent = `Sunset: ${sunsetToUTC} PM`;
+    sunrisePara.textContent = `Sunrise: ${sunriseToUTC}`;
+    sunsetPara.textContent = `Sunset: ${sunsetToUTC}`;
 
     currentWeatherContainer.appendChild(tempPara);
     currentWeatherContainer.appendChild(humidityPara);
@@ -147,4 +148,45 @@ function dislayCurrentWeather(data) {
     
 }
 
+
+function displaySpotlights(members) {
+    const filteredMembers = members.filter(member => 
+    ["Gold", "Silver"].includes(member.membership_level)
+    );
+
+    console.log('These items are filtered:',filteredMembers);
+
+    const shuffleArray = array => array.sort(() => Math.random() - 0.5);
+    const selectedMembers = shuffleArray(filteredMembers).slice(0, 3);
+    console.log('These items are sliced:', selectedMembers);
+
+    document.getElementById('spotlights-container').innerHTML = '';
+
+    selectedMembers.forEach(member => {
+
+       
+        const card  = document.createElement('div');
+        card.classList.add('spotlight-card');
+        
+        card.innerHTML = `
+        <p>${member.name}</p>
+        <p>${member.business_tagline}</p>
+        <hr>
+        <img src= "${member.imageURL}" alt= "${member.name} image" width ="250" height="150">
+        <p><strong>EMAIL: </strong>${member.email}</p>
+        <p><strong>PHONE: </strong>${member.phone}</p>
+        <p>URL: <a href="${member.website}" target="_blank">Visit Website</a></p>
+        `;
+
+        document.getElementById('spotlights-container').appendChild(card);
+
+    });
+
+}
+
+
+
+
 apiFetch();
+
+

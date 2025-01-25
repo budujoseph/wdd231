@@ -7,7 +7,10 @@
         "website": "https://www.techland.com.gh/",
         "imageURL": "https://images.pexels.com/photos/1181341/pexels-photo-1181341.jpeg?auto=compress&cs=tinysrgb&w=600",
         "membership_level": "Gold",
-        "description": "Leading in technology solutions and innovation."
+        "description": "Leading in technology solutions and innovation.",
+        "business_tagline": "Leading in technology solutions and innovation",
+        "email": "info@techworld,com"
+        
       },
       {
         "name": "Green Earth LLC",
@@ -16,7 +19,10 @@
         "website": "https://greenearthcleaning.com/",
         "imageURL": "https://images.pexels.com/photos/30262271/pexels-photo-30262271/free-photo-of-close-up-of-fern-leaf-against-mountainous-landscape.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         "membership_level": "Member",
-        "description": "Eco-friendly products and sustainable practices."
+        "description": "Eco-friendly products and sustainable practices.",
+        "business_tagline": "Discover great opportunities",
+        "email": "greenearthe@gmail.com"
+        
       },
       {
         "name": "Urban Eats",
@@ -25,7 +31,9 @@
         "website": "https://budujoseph.github.io/wdd131/project/fast-food.html",
         "imageURL": "https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         "membership_level": "Member",
-        "description": "Delivering delicious meals to your doorstep."
+        "description": "Delivering delicious meals to your doorstep.",
+        "business_tagline": "Where flavour meets freshness",
+        "email": "info@urbanfoods.com"
       },
       {
         "name": "Fitness Pro Gym",
@@ -34,7 +42,9 @@
         "website": "https://wavesgym.com/",
         "imageURL": "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=600",
         "membership_level": "Gold",
-        "description": "State-of-the-art gym and fitness services."
+        "description": "State-of-the-art gym and fitness services.",
+        "business_tagline": "Safe sweat space",
+        "email": "info@wavesgym.com"
       },
       {
         "name": "Smart Finance Co.",
@@ -43,7 +53,9 @@
         "website": "https://payaza.africa/",
         "imageURL": "https://images.pexels.com/photos/26743048/pexels-photo-26743048/free-photo-of-stock-charts-on-tablet-screen-business-and-economy.jpeg?auto=compress&cs=tinysrgb&w=600",
         "membership_level": "Silver",
-        "description": "Financial services and consulting."
+        "description": "Financial services and consulting.",
+        "business_tagline": "The next generation of payment solutions",
+        "email": "info@payazaafrica.com"
       },
       {
         "name": "Artistic Visions Studio",
@@ -52,7 +64,9 @@
         "website": "https://webvisionstudio.it/",
         "imageURL": "https://images.pexels.com/photos/5418662/pexels-photo-5418662.jpeg?auto=compress&cs=tinysrgb&w=600",
         "membership_level": "Member",
-        "description": "Creative design and digital artwork services."
+        "description": "Creative design and digital artwork services.",
+        "business_tagline": "Track your success in the Digital World",
+        "email": "info@webvision.it"
       },
       {
         "name": "Bright Minds Education",
@@ -61,7 +75,9 @@
         "website": "https://www.khanacademy.org/",
         "imageURL": "https://images.pexels.com/photos/7869231/pexels-photo-7869231.jpeg?auto=compress&cs=tinysrgb&w=600",
         "membership_level": "Silver",
-        "description": "Innovative learning and tutoring solutions."
+        "description": "Innovative learning and tutoring solutions.",
+        "business_tagline": "For every student,every classroom. Real results.",
+        "email": "info@brightminds.edu"
       }
     ]
   }
