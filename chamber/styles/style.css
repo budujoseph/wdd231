@@ -215,7 +215,8 @@ footer {
     background-color: #998;
     padding: 10px;
     color: #000;
-    /* min-height: 80px; */
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .social-media a {
@@ -228,7 +229,14 @@ footer {
     text-align: center;
     margin-top: 0.7em;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
 }
+
+
+
+
 
 .cta-invite-para p strong {
     font-weight: 700;
@@ -238,6 +246,62 @@ footer {
     width: 100%;
     height: auto;
 }
+
+.spotlight-card {
+    align-items: center;
+}
+
+.cta  {
+    text-align: center;
+    background-color: rgb(218, 214, 208);
+    padding: 2em;
+    width: 100%;
+    height: auto;
+}
+
+.cta h2 {
+    font-size: 25px;
+    padding: 0;
+}
+
+.cta-invite-para p  {
+    padding: .6rem;
+}
+
+.cta a {
+    text-decoration: none;
+    background-color: #998;
+    margin-top: 2rem;
+    padding:.7em 2vw;
+    color: #000;
+    border-radius: 5px;
+}
+
+.cta a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-items p {
+    font-size: 15px;
+    position: absolute;
+    background-color: azure;
+    top: 90%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 55%;
+    color: #000;
+}
+
+.hero-items {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+
 
 
 @media screen and (min-width: 44rem) {
