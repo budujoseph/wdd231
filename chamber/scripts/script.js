@@ -154,8 +154,8 @@ const forcastInfo = document.getElementById('forcast-info');
 function displayForcastInfo(data) {
     forcastInfo.innerHTML = `
         <p><strong>Today:</strong>${data.main.temp}&degC</p>
-        <p><strong>Today:</strong>${data.main.temp}&degC</p>
-        <p><strong>Today:</strong>${data.main.temp}&degC</p>
+        <p><strong>Tuesday:</strong>${data.main.temp}&degC</p>
+        <p><strong>Wednesday:</strong>${data.main.temp}&degC</p>
     `;
 }
 

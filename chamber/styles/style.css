@@ -242,7 +242,7 @@ footer {
     font-weight: 700;
 }
 
-.hero-items picture img {
+.hero-items img {
     width: 100%;
     height: auto;
 }
@@ -284,20 +284,20 @@ footer {
 .hero-items p {
     font-size: 15px;
     position: absolute;
-    background-color: azure;
-    top: 90%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+    background-color: black;
+    left: 35%;
+    top: 75%;
     padding: 10px;
     font-size: 18px;
     border-radius: 5px;
-    width: 55%;
-    color: #000;
+    color: white;
+    opacity: .9;
+    margin-right: 3rem;
 }
 
 .hero-items {
     position: relative;
-    display: inline-block;
+    display: inline-block; 
     text-align: center;
 }
 
@@ -330,6 +330,15 @@ footer {
 .current-weather ,.weather-forcast, .events {
     background-color: lightgray;
     margin-bottom: 1.2rem;
+    height: 20em;
+}
+
+#forcast-info {
+    padding: 10px;
+}
+
+#forcast-info p {
+    padding: 10px;
 }
 
 
