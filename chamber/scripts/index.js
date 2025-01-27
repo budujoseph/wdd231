@@ -25,10 +25,15 @@ function displaySpotlights(members) {
        
         const memberCard  = document.createElement('div');
         memberCard.classList.add('spotlight-card');
+
+        const headerTagline = document.createElement('section')
+        headerTagline.classList.add('header-tagline')
+        headerTagline.innerHTML = `
+        <h3>${member.name}</h3>
+        <p>${member.business_tagline}</p>
+        `
         
         memberCard.innerHTML = `
-        <p>${member.name}</p>
-        <p>${member.business_tagline}</p>
         <hr>
         <img src= "${member.imageURL}" alt= "${member.name} image" width ="250" height="150">
         <p><strong>EMAIL: </strong>${member.email}</p>
@@ -36,7 +41,14 @@ function displaySpotlights(members) {
         <p>URL: <a href="${member.website}" target="_blank">Visit Website</a></p>
         `;
 
+        if(memberCard.firstChild) {
+            memberCard.insertBefore(headerTagline, memberCard.firstChild)
+        } else{
+            memberCard.appendChild(headerTagline);
+        }
         document.getElementById('spotlights-container').appendChild(memberCard);
+        
+      
 
     });
 
