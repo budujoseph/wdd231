@@ -235,9 +235,6 @@ footer {
 }
 
 
-
-
-
 .cta-invite-para p strong {
     font-weight: 700;
 }
@@ -254,7 +251,7 @@ footer {
 .cta  {
     text-align: center;
     background-color: rgb(218, 214, 208);
-    padding: 2em;
+    padding: .8rem;
     width: 100%;
     height: auto;
 }
@@ -265,7 +262,7 @@ footer {
 }
 
 .cta-invite-para p  {
-    padding: .6rem;
+    padding: .5rem;
 }
 
 .cta a {
