@@ -314,9 +314,7 @@ footer {
     margin-bottom: .9rem;
 }
 
-/* .events {
-    height: 30vh;
-} */
+
 
 .events-weather {
     text-align: center;
@@ -324,17 +322,17 @@ footer {
     grid-template-columns: 1fr;
 }
 
-.current-weather ,.weather-forcast, .events {
+.current-weather ,.weather-forecast, .events {
     background-color: lightgray;
     margin-bottom: 1.2rem;
     height: 20em;
 }
 
-#forcast-info {
+#forecast-info {
     padding: 10px;
 }
 
-#forcast-info p {
+#forecast-info p {
     padding: 10px;
 }
 
@@ -458,6 +456,13 @@ footer {
 
     .spotlight-card {
         flex: 1;
+    }
+
+    .hero-items p {
+        top: 85%;
+        left: 40%;
+        font-size: 25px;
+        opacity: 2;
     }
 
 
