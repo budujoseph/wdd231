@@ -96,7 +96,6 @@ const url = 'https://api.openweathermap.org/data/2.5/weather?lat=5.86&lon=-0.67&
 const iconImg = document.getElementById('iconImg');
 const iconDescrip = document.getElementById('icon-descrip');
 const currentWeatherContainer = document.getElementById('current-info');
-const forcastContainer = document.getElementById('forcast-info');
 
 async function apiFetch() {
     try {
@@ -104,8 +103,7 @@ async function apiFetch() {
         if (response.ok) {
             let data = await response.json();
             console.log(data);
-            dislayCurrentWeather(data);
-            displayForcastInfo(data);
+            displayCurrentWeather(data);
         } else {
             throw Error(await response.text());
             
@@ -116,7 +114,7 @@ async function apiFetch() {
     }
 }
 
-function dislayCurrentWeather(data) {
+ function displayCurrentWeather(data) {
     const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     iconImg.setAttribute('src', iconSrc);
     iconImg.setAttribute('alt', 'Weather Icon Image');
@@ -148,16 +146,7 @@ function dislayCurrentWeather(data) {
     
 }
 
-const forcastInfo = document.getElementById('forcast-info');
 
-
-function displayForcastInfo(data) {
-    forcastInfo.innerHTML = `
-        <p><strong>Today:</strong>${data.main.temp}&degC</p>
-        <p><strong>Tuesday:</strong>${data.main.temp}&degC</p>
-        <p><strong>Wednesday:</strong>${data.main.temp}&degC</p>
-    `;
-}
 
 
 getMemberData();

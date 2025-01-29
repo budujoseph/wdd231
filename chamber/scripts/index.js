@@ -42,7 +42,7 @@ function displaySpotlights(members) {
         `;
 
         if(memberCard.firstChild) {
-            memberCard.insertBefore(headerTagline, memberCard.firstChild)
+            memberCard.insertBefore(headerTagline, memberCard.firstChild);
         } else{
             memberCard.appendChild(headerTagline);
         }
@@ -55,3 +55,37 @@ function displaySpotlights(members) {
 }
 
 getMemberData();
+
+const apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=5.86&lon=-0.67&units=metric&appid=81b5e2c74822f8180b695cd8afd4aff1';
+const forecastInfo = document.querySelector('.forecast-info');
+
+
+async function fetchApi() {
+    try {
+        const response =  await fetch(apiUrl);
+        if (response.ok) {
+            let data = await response.json();
+            displayForecast(today, data);
+            console.log(data)
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const newDay = new Date()
+const today = newDay.getDay()
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
+function displayForecast(today, data) {
+    forecastInfo.innerHTML =  `
+        <p><strong>Today</strong> ${data.list[0].main.temp}&degC</p>
+        <p><strong>${dayNames[today]}</strong> ${data.list[8].main.temp}&degC</p>
+        <p><strong>${dayNames[today + 1]}</strong> ${data.list[16].main.temp}&degC</p>
+    `;
+}
+
+fetchApi()
