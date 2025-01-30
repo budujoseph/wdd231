@@ -38,32 +38,7 @@
         </ul>
     </nav>
     <main>
-       <h2>Memebership Application Form</h2>
-       <form id="joinform" method="get" action="thankyou.html">
-        <label>Fist Name<input type="text" name="firstname" title="Enter your first name" autocomplete="given-name" required></label>
-        <label>Last Name<input type="text" name="lastname" title="Enter your last name" autocomplete="family-name" required></label>
-        <label>Title<input type="text" name="organizational-title" title="Enter your title" autocomplete="organization-title" pattern="[A-Za-z\- {7,}]"></label>
-        <label>Email<input type="email" name="email" title="Enter your email" autocomplete="email" placeholder="example@email.com" required></label>
-        <label>Cell Phone<input type="tel" name="telephone" title="Enter your phone number" autocomplete="tel" required></label>
-        <label>Business Name<input type="text" name="business-name" title="Enter your business name" autocomplete="organization"></label>
-        <div>Membership Level</div>
-            <div class="membership-radios">
-                <label><input type="radio" name="membership" >Non Profit Membership</label>
-                <label><input type="radio" name="membership" >Bronze Membership</label>
-                <label><input type="radio" name="membership" >Silver Membership</label>
-                <label><input type="radio" name="membership" >Gold Membership</label>
-            </div>
-        <label>
-            Business Description
-            <textarea name="org-description" title="Enter a brief description of the business or organization"></textarea>
-        </label>
-        <input type="hidden" name="timestamp" id="timestamp"> 
-        <!-- document.getElementById('timestamp').value = new Date().toISOString(); -->
-       </form>
-    </main>
-    <section>
-        <h2>Membership Levels</h2>
-    </section>
+       <div id="form-details"></div>
     <footer>
         <section class="footer-contact-info">
             <h4>Asamankese Chamber of Commerce</h4>
