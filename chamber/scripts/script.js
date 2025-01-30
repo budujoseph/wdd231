@@ -155,3 +155,21 @@ getMemberData();
 apiFetch();
 
 
+const showBtn = document.querySelectorAll('.show-dialog');
+
+
+showBtn.forEach((btn, index) => {
+    btn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        myDialog = btn.nextElementSibling;
+        if(myDialog) {
+            myDialog.showModal();
+        }
+    });
+
+   
+});
+
+
+
