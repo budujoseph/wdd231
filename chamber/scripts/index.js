@@ -3,7 +3,7 @@ const jsonFile = './data/member.json';
 async function getMemberData() {
     const response = await fetch(jsonFile);
     const data = await response.json();
-    console.log(data.members);
+    // console.log(data.members);
     displaySpotlights(data.members);
 }
 
@@ -12,11 +12,11 @@ function displaySpotlights(members) {
     ["Gold", "Silver"].includes(member.membership_level)
     );
 
-    console.log('These items are filtered:',filteredMembers);
+    // console.log('These items are filtered:',filteredMembers);
 
     const shuffleArray = array => array.sort(() => Math.random() - 0.5);
     const selectedMembers = shuffleArray(filteredMembers).slice(0, 3);
-    console.log('These items are sliced:', selectedMembers);
+    // console.log('These items are sliced:', selectedMembers);
 
     document.getElementById('spotlights-container').innerHTML = '';
 
@@ -66,7 +66,7 @@ async function fetchApi() {
         if (response.ok) {
             let data = await response.json();
             displayForecast(today, data);
-            console.log(data)
+            // console.log(data)
         } else {
             throw Error(await response.text());
         }

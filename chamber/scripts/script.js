@@ -116,9 +116,10 @@ async function apiFetch() {
 
  function displayCurrentWeather(data) {
     const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    iconImg.setAttribute('src', iconSrc);
-    iconImg.setAttribute('alt', 'Weather Icon Image');
-    iconDescrip.innerHTML = data.weather[0].description;
+    iconImg.innerHTML = `
+        <img src= "${iconSrc}" alt="${ data.weather[0].description}">
+    `
+    
 
     const tempPara = document.createElement('p');
     const humidityPara = document.createElement('p');
