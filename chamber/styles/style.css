@@ -463,6 +463,43 @@ hr {
     grid-template-columns: 1fr;
 }
 
+dialog {
+    padding: .8rem;
+    background-color: lightblue;
+    margin: auto;
+    border: 4px solid red;
+}
+
+dialog h4 {
+    padding: .2rem;
+}
+
+dialog ul {
+    margin-bottom: .5rem;
+}
+
+dialog ul li {
+    padding: 5px;
+    margin-left: .5rem;
+    list-style-type: square;
+}
+
+dialog strong {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.close-dialog {
+    display: block;
+    padding: .80rem;
+    margin: auto;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
 
 
 
