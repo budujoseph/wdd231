@@ -355,6 +355,12 @@ footer {
     margin-top: .3rem;
 }
 
+.form-sec h2 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin-left: 1.2rem;
+}
+
 #joinform label {
     display: block;
     padding: 10px;
@@ -414,6 +420,44 @@ hr {
 #joinform textarea {
     height: 100px;
     scroll-padding-block: 10px;
+}
+
+.dialog-sec h2 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin-left: 1.2rem;
+}
+
+.dialog-sec h3  {
+    padding: 10px;
+    text-align: center;
+
+}
+
+.dialog-sec section {
+    padding: 10px;
+    background-color: gray;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px 0 8px 0;
+    margin-left: .9rem;
+}
+
+.show-dialog {
+    padding: .75rem;
+    border: none;
+    background-image: linear-gradient(#221e41, #130e70);
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+}
+
+.join-main {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 
@@ -529,6 +573,25 @@ hr {
         left: 40%;
         font-size: 25px;
         opacity: 2;
+    }
+
+    .join-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+    }
+
+    .dialog-sec section {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    
+
+    #joinform button[type="submit"] {
+        margin-bottom: .9rem;
+        padding: 1.2rem;
     }
 
 
