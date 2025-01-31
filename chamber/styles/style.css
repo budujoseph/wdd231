@@ -434,6 +434,8 @@ hr {
 
 }
 
+
+
 .dialog-sec section {
     padding: 10px;
     background-color: gray;
@@ -441,7 +443,8 @@ hr {
     width: 100%;
     max-width: 400px;
     border-radius: 8px 0 8px 0;
-    margin-left: .9rem;
+    margin-left: .6rem;
+    
 }
 
 .show-dialog {
