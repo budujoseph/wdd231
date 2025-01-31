@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Coommerce || Directory Page</title>
+    <title>Chamber of Commerce || Join Page</title>
     <meta name="description" content="Directory Page Of Chamber of Commerce">
     <meta name="author" content="Joseph Budu Joseph">
     <link rel="icon" href="favicon.ico">
@@ -38,85 +38,101 @@
         </ul>
     </nav>
     <main>
-       <h2>Membership Application Form</h2>
-       <form id="joinform" method="get" action="thankyou.html">
-        <label>Fist Name<input type="text" name="firstname" title="Enter your first name" autocomplete="given-name" required></label><br>
-        <label>Last Name<input type="text" name="lastname" title="Enter your last name" autocomplete="family-name" required></label><br>
-        <label>Title<input type="text" name="organizational-title" title="Enter your title" autocomplete="organization-title" pattern="[A-Za-z\- {7,}]"></label><br>
-        <label>Email<input type="email" name="email" title="Enter your email" autocomplete="email" placeholder="example@email.com" required></label><br>
-        <label>Cell Phone<input type="tel" name="telephone" title="Enter your phone number" autocomplete="tel" required></label><br>
-        <label>Business Name<input type="text" name="business-name" title="Enter your business name" autocomplete="organization"></label><br>
-        <div>Membership Level</div>
-            <div class="membership-radios">
-                <label><input type="radio" name="membership" >Non Profit Membership</label><br>
-                <label><input type="radio" name="membership" >Bronze Membership</label><br>
-                <label><input type="radio" name="membership" >Silver Membership</label><br>
-                <label><input type="radio" name="membership" >Gold Membership</label><br>
-            </div>
-        <label>
-            Business Description<br>
-            <textarea name="org-description" title="Enter a brief description of the business or organization"></textarea>
-        </label><br>
-        <input type="hidden" name="timestamp" id="timestamp"> 
-        <!-- document.getElementById('timestamp').value = new Date().toISOString(); -->
-         <button type="submit">Apply for Membership</button>
-       </form>
+        <section class="form-sec">
+            <h2>Membership Application Form</h2>
+            <form id="joinform" method="get" action="thankyou.html">
+                <label>First Name*<input type="text" name="firstname" title="Enter your first name" autocomplete="given-name" required></label>
+                <label>Last Name*<input type="text" name="lastname" title="Enter your last name" autocomplete="family-name" required></label>
+                <label>Title<input type="text" name="organizational-title" title="Enter your title" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}"></label>
+                <label>Email*<input type="email" name="email" title="Enter your email" autocomplete="email" placeholder="example@email.com" required></label>
+                <label>Cell Phone*<input type="tel" name="telephone" title="Enter your phone number" autocomplete="tel" required></label>
+                <label>Business Name<input type="text" name="business-name" title="Enter your business name" autocomplete="organization"></label>
+                <div class="radio-header">Membership Level</div>
+                <hr>
+                <div class="radios">
+                    <label><input type="radio" name="membership" value="Non Profit">Non Profit Membership</label>
+                    <label><input type="radio" name="membership" value="Bronze">Bronze Membership</label>
+                    <label><input type="radio" name="membership" value="Silver">Silver Membership</label>
+                    <label><input type="radio" name="membership" value="Gold">Gold Membership</label>
+                </div>
+                <label>
+                    Business Description
+                    <textarea name="org-description" title="Enter a brief description of the business or organization"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp"> 
+                <!-- document.getElementById('timestamp').value = new Date().toISOString(); -->
+                <button type="submit">Apply for Membership</button>
+            </form>
+        </section>
+        <section class="dialog-sec">
+            <h2>Membership Levels</h2>
+            <section>
+                <h3>Non Profit Membership Level</h3>
+                <button class="show-dialog">Learn More</button>
+                <dialog>
+                    <h4>Non Profit Membership</h4>
+                    <p>Benefits include: </p>
+                    <ul>
+                        <li>Build relationships with local business, potential donors and volunteers.</li>
+                        <li>Access training on nonprofit management, marketing, leadership and fundraising.</li>
+                    </ul>
+                    <strong>Cost: $0</strong><br>
+                    <button class="close-dialog" autofocus>Close</button>
+                </dialog>
+            </section>
+            <section>
+                <h3>Bronze Membership Level</h3>
+                <button class="show-dialog" autofocus>Learn More</button>
+                <dialog>
+                    <h4>Bronze Membership Level</h4>
+                    <p>Benefits include: </p>
+                    <ul>
+                        <li>Get featured on the chamber's website and printed materials.</li>
+                        <li>Stay informed and involved in legislative issues that impact businesses.</li>
+                        <li>Collaborate with local businesses for joint fundraising events, volunteer programs and cause driven initiatives.</li>
+                    </ul>
+                    <strong>Cost: $50.00</strong><br>
+                    <button class="close-dialog" autofocus>Close</button>
+                </dialog>
+            </section>
+            <section>
+                <h3>Silver Membership Level</h3>
+                <button class="show-dialog" autofocus>Learn More</button>
+                <dialog>
+                    <h4>Silver Membership Level</h4>
+                    <p>Benefits include: </p>
+                    <ul>
+                        <li>Increase frequency of mentions on the chamber's social media platforms, reaching a wider audience.</li>
+                        <li>Access to more exclusive or high-level networking events, including mixers luncheons, and business expos.</li>
+                        <li>Offers voting rights for members, giving you a say in the direction and decisions of the chamber.</li>
+                        <li>Get exclusive data, surveys and reports that can help you stay informed about local economic conditions, potential donors and community trends.</li>
+                    </ul>
+                    <strong>Cost: $80.00</strong><br>
+                    <button class="close-dialog" autofocus>Close</button>
+    
+                </dialog>
+            </section>
+            <section>
+                <h3>Gold Membership Level</h3>
+                <button class="show-dialog" autofocus>Learn More</button>
+                <dialog>
+                    <h4>Gold Membership Level</h4>
+                    <p>Benefits include: </p>
+                    <ul>
+                        <li>Receives the most prominent placement in the chamber's online and printed directories, ensuring maximum exposure.</li>
+                        <li>Access to high level invite-only events such as exclusive luncheons with top business leaders, government officials and philanthropic investors </li>
+                        <li>Invitations to private meetings and discussions with key business figures, local policy makers and influencers. </li>
+                        <li>Gain access to more comprehensive group insurance options, including health, liability and worker's compensation coverage for employees.</li>
+                        <li>Recognition in front of the local business and nonprofit community, as well as press releases and chamber communications</li>
+                    </ul>
+                    <strong>Cost: $120.00</strong><br>
+                    <button class="close-dialog" autofocus>Close</button>
+                </dialog>
+            </section>
+        </section>
+       
     </main>
-    <section>
-        <h3>Membership Levels</h3>
-        <section>
-            <h3>Non Profit Membership Level</h3>
-            <button class="show-dialog">Learn More</button>
-            <dialog>
-                <h1>Non Profit Membership</h1>
-                <p>Benefits include: </p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <button class="close-dialog" autofocus>Close</button>
-            </dialog>
-        </section>
-        <section>
-            <h3>Bronze Membership Level</h3>
-            <button class="show-dialog" autofocus>Learn More</button>
-            <dialog>
-                <h1>Non Profit Membership</h1>
-                <p>Benefits include: </p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <button class="close-dialog" autofocus>Close</button>
-            </dialog>
-        </section>
-        <section>
-            <h3>Silver Membership Level</h3>
-            <button class="show-dialog" autofocus>Learn More</button>
-            <dialog>
-                <h1>Non Profit Membership</h1>
-                <p>Benefits include: </p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <button class="close-dialog" autofocus>Close</button>
-            </dialog>
-        </section>
-        <section>
-            <h3>Gold Membership Level</h3>
-            <button class="show-dialog" autofocus>Learn More</button>
-            <dialog>
-                <h1>Non Profit Membership</h1>
-                <p>Benefits include: </p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <button class="close-dialog" autofocus>Close</button>
-            </dialog>
-        </section>
-    </section>
+   
     <footer>
         <section class="footer-contact-info">
             <h4>Asamankese Chamber of Commerce</h4>
