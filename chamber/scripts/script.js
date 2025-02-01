@@ -154,11 +154,12 @@ getMemberData();
 
 apiFetch();
 
+// scripts for join page
 
 const showBtn = document.querySelectorAll('.show-dialog');
+const closeBtn = document.querySelectorAll('.close-dialog');
 
-
-showBtn.forEach((btn, index) => {
+showBtn.forEach((btn) => {
     btn.addEventListener('click', (event) => {
         event.preventDefault();
 
@@ -168,8 +169,54 @@ showBtn.forEach((btn, index) => {
         }
     });
 
-   
 });
+
+closeBtn.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const dialog = button.closest("dialog");
+        if(dialog) {
+            dialog.close();
+        }
+    });
+});
+
+
+const currentPage = window.location.href;
+console.log(currentPage);
+
+const allUrl = currentPage.split('?');
+console.log(allUrl);
+
+const formInfo = allUrl[1].split('&');
+console.log('Form Data:',formInfo); 
+
+const formDetails  = document.getElementById('form-details');
+
+function displayForm(detail) {
+    formInfo.forEach((el) => {
+        console.log(el);
+        if(el.startsWith(detail)) {
+            result = el.split('=')[1].replace("%40","@");
+        }
+    });
+
+    return result;
+}
+
+//const applyTime = document.getElementById('timestamp');
+
+
+formDetails.innerHTML = `
+    <p>First Name: ${displayForm("first")}</p>
+    <p>Last Name: ${displayForm("last")}</p>
+    <p>Email: ${displayForm("email")}</p>
+    <p>Business Name: ${displayForm("business").replaceAll("+", ' ')}</p>
+    <p>Phone Number: ${displayForm("telephone").split('B')[1]}</p>
+
+`;
+
+
 
 
 

@@ -463,12 +463,6 @@ hr {
     grid-template-columns: 1fr;
 }
 
-dialog {
-    padding: .8rem;
-    background-color: lightblue;
-    margin: auto;
-    border: 4px solid red;
-}
 
 dialog h4 {
     padding: .2rem;
@@ -493,13 +487,67 @@ dialog strong {
     display: block;
     padding: .80rem;
     margin: auto;
-    width: 20%;
+    width: 100%;
+    max-width: 100px;
     border: none;
     cursor: pointer;
     background-color: black;
     color: white;
 }
 
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.5s allow-discrete;
+}
+
+dialog {
+    padding: .8rem;
+    background-color: lightblue;
+    margin: auto;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.5s all-discrete;
+}
+
+dialog[open] {
+    opacity: 1;
+}
+
+@starting-style {
+    dialog[open] {
+        opacity: 0;
+    }
+}
+
+dialog[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@starting-style {
+    dialog[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0)
+    }
+}
+
+@keyframes stuckup {
+    0% {
+         margin-bottom: 8rem;
+         opacity: 0;
+
+    }
+
+    100% {
+        margin-bottom: 1.5rem;
+        opacity: 1;
+
+    }
+}
+
+.dialog-sec section {
+    animation: 1.2s ease-out stuckup;
+}
 
 
 

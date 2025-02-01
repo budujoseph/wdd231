@@ -45,7 +45,7 @@
                 <label>Last Name*<input type="text" name="lastname" title="Enter your last name" autocomplete="family-name" required></label>
                 <label>Title<input type="text" name="organizational-title" title="Enter your title" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}"></label>
                 <label>Email*<input type="email" name="email" title="Enter your email" autocomplete="email" placeholder="example@email.com" required></label>
-                <label>Cell Phone*<input type="tel" name="telephone" title="Enter your phone number" autocomplete="tel" required></label>
+                <label>Cell Phone*<input type="tel" name="telephone" title="Enter your phone number" autocomplete="tel" placeholder="()" required></label>
                 <label>Business Name<input type="text" name="business-name" title="Enter your business name" autocomplete="organization"></label>
                 <div class="radio-header">Membership Level</div>
                 <hr>
@@ -60,7 +60,6 @@
                     <textarea name="org-description" title="Enter a brief description of the business or organization"></textarea>
                 </label>
                 <input type="hidden" name="timestamp" id="timestamp"> 
-                <!-- document.getElementById('timestamp').value = new Date().toISOString(); -->
                 <button type="submit">Apply for Membership</button>
             </form>
         </section>
