@@ -46,7 +46,7 @@ const businessCards = document.getElementById('business-cards');
 async function getMemberData() {
     const response = await fetch(jsonFilePath);
     const data = await response.json();
-    console.log(data.members);
+    // console.log(data.members);
     displayMembers(data.members);
 }
 
@@ -102,7 +102,7 @@ async function apiFetch() {
         const response = await fetch(url);
         if (response.ok) {
             let data = await response.json();
-            console.log(data);
+            // console.log(data);
             displayCurrentWeather(data);
         } else {
             throw Error(await response.text());
@@ -183,19 +183,36 @@ closeBtn.forEach((button) => {
 
 
 const currentPage = window.location.href;
-console.log(currentPage);
+// console.log(currentPage);
 
 const allUrl = currentPage.split('?');
-console.log(allUrl);
+// console.log(allUrl);
 
 const formInfo = allUrl[1].split('&');
-console.log('Form Data:',formInfo); 
+// console.log('Form Data:',formInfo); 
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const timestamp = document.getElementById('timestamp');
+    let myDate = Date.now();
+    console.log(myDate);
+    let subTime = new Date().toISOString().split('T')[1].split('.')[0];
+    console.log(subTime);
+    if(timestamp) {
+        timestamp.value = subTime;
+    }
+
+});
 
 const formDetails  = document.getElementById('form-details');
 
 function displayForm(detail) {
     formInfo.forEach((el) => {
-        console.log(el);
+        // console.log(el);
         if(el.startsWith(detail)) {
             result = el.split('=')[1].replace("%40","@");
         }
@@ -204,7 +221,7 @@ function displayForm(detail) {
     return result;
 }
 
-//const applyTime = document.getElementById('timestamp');
+
 
 
 formDetails.innerHTML = `
@@ -212,9 +229,12 @@ formDetails.innerHTML = `
     <p>Last Name: ${displayForm("last")}</p>
     <p>Email: ${displayForm("email")}</p>
     <p>Business Name: ${displayForm("business").replaceAll("+", ' ')}</p>
-    <p>Phone Number: ${displayForm("telephone").split('B')[1]}</p>
-
+    <p>Phone Number: ${displayForm("telephone")}</p>
+    <p>Time of Submission: ${displayForm("timestamp")}</p>
 `;
+
+
+
 
 
 

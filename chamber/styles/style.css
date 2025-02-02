@@ -493,6 +493,7 @@ dialog strong {
     cursor: pointer;
     background-color: black;
     color: white;
+    border-radius: 10px 0 10px 0;
 }
 
 dialog::backdrop {
@@ -550,7 +551,14 @@ dialog[open]::backdrop {
 }
 
 
-
+#form-details {
+    padding: 40px;
+    background-color: rgb(57, 61, 62);
+    color: white;
+    margin: 1rem;
+    border-radius: 8px;
+    
+}
 
 
 
