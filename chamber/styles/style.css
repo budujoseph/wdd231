@@ -498,7 +498,7 @@ dialog strong {
 
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0);
-    transition: all 0.5s allow-discrete;
+    transition: all 0.5s ease-out;
 }
 
 dialog {
@@ -509,7 +509,7 @@ dialog {
     width: 100%;
     border-radius: 8px;
     opacity: 0;
-    transition: all 0.5s all-discrete;
+    transition: all 0.5s ease-out;
 }
 
 dialog[open] {
