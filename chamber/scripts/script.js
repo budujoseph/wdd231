@@ -196,17 +196,12 @@ const formInfo = allUrl[1].split('&');
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const timestamp = document.getElementById('timestamp');
-    let myDate = Date.now();
-    console.log(myDate);
-    let subTime = new Date().toISOString().split('T')[1].split('.')[0];
-    console.log(subTime);
-    if(timestamp) {
-        timestamp.value = subTime;
-    }
-
-});
+const timestamp = document.getElementById('timestamp');
+let myDate = Date.now();
+console.log(myDate);
+let subTime = new Date().toISOString().split('T')[1].split('.')[0];
+console.log(subTime);
+    
 
 const formDetails  = document.getElementById('form-details');
 
@@ -230,7 +225,7 @@ formDetails.innerHTML = `
     <p>Email: ${displayForm("email")}</p>
     <p>Business Name: ${displayForm("business").replaceAll("+", ' ')}</p>
     <p>Phone Number: ${displayForm("telephone")}</p>
-    <p>Time of Submission: ${displayForm("timestamp")}</p>
+    <p>Time of Submission: ${subTime}</p>
 `;
 
 
