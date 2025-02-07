@@ -22,7 +22,7 @@
     
     }
     
-    .card figcaption p {
+    .card p {
         padding: .9rem;
         text-align: left;
     }
@@ -56,7 +56,14 @@
     }
 
     .card figure {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "img description"
+    }
+
+    .card figure figcaption {
+        grid-area: description;
     }
 
     .card h2 {
