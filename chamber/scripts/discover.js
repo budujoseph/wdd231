@@ -32,3 +32,8 @@ function displayPlaces(places) {
 }
 
 displayPlaces(places);
+
+
+const greetingMsg = document.getElementById("message-content");
+greetingMsg.textContent = "Yo wossop";
+
