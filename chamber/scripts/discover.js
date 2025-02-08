@@ -10,7 +10,6 @@ function displayPlaces(places) {
         let card = document.createElement('section');
         card.classList.add('card')
         card.innerHTML = `
-            <h2>${place.name}</h2>
             <figure>
             <img src=${place.imgUrl} alt=${place.name}>
             <figcaption>
@@ -18,6 +17,7 @@ function displayPlaces(places) {
             <address>${place.address}</address>
             </figcaption>
             </figure>
+            <h2>${place.name}</h2>
             
         `;
 
