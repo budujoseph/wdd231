@@ -180,11 +180,11 @@
         }
     }
 
-    /* .card img:hover {
+     .card img:hover {
         box-shadow: 0 0  50px black;
         border-radius: 10px;
         animation: popout 1.5s ease-out;
-    } */
+    }
 /* 
     .card p {
         max-height: 50vh;

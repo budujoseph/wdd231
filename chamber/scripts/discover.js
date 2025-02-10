@@ -40,7 +40,7 @@ const lastVisit = localStorage.getItem('lastVisit');
 console.log(lastVisit);
 
 const currentDate = new Date();
-console.log(currentDate);
+// console.log(currentDate);
 
 let message = "";
 
@@ -48,18 +48,20 @@ if (!lastVisit) {
     message = "Welcome! Let us know if you have any questions"
 } else {
     const lastVisitDate = new Date(lastVisit);
-    console.log(lastVisitDate);
+    // console.log(lastVisitDate);
 
     const timeDifference = currentDate - lastVisitDate;
-    console.log(timeDifference);
+    // console.log(timeDifference);
 
     const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    console.log(daysDifference);
+    // console.log(daysDifference);
 
     if (daysDifference < 1) {
         message = "Back so soon! Awesome!"
+        console.log(message)
     } else {
         message = `You last visited ${daysDifference} day${daysDifference === 1 ? "" : "s"} ago`;
+        console.log(message);
     }
 }
 
