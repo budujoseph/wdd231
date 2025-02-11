@@ -37,7 +37,7 @@ displayPlaces(places);
 const greetingMsg = document.getElementById("message-content");
 
 const lastVisit = localStorage.getItem('lastVisit');
-console.log(lastVisit);
+
 
 const currentDate = new Date();
 // console.log(currentDate);
