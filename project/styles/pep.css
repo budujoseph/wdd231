@@ -8,3 +8,7 @@
     --heading-font: 'Montserrat', serif;
     --body-font: 'Raleway', serif;
 }
+
+body {
+    background-color: var(--background-color);
+}
