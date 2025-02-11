@@ -1,4 +1,22 @@
 
+const hamburger = document.getElementById('trygram');
+const menuLinks = document.querySelector('#nav-animation');
+
+hamburger.addEventListener('click', () => {
+    menuLinks.classList.toggle('show');
+    hamburger.classList.toggle('show');
+});
+
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach((link) => {
+    if(link.href.includes(activePage)) {
+        link.classList.add('active');
+    }
+    
+});
+
 const jsonFilePath = "./data/events.json";
 const eventsContainer = document.querySelector('.events-container');
 
