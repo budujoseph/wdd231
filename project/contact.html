@@ -35,18 +35,49 @@
         </ul>
     </nav>
     <main>
-        <div class="hero-items">
-            <h1> Investing in Youth,<br><span>Creating Champions</span> </h1>
-            <picture class="hero-img">
-                <source srcset="images/newhero.webp" media="(min-width: 704px)">
-                <img src="images/mobilehero.webp" alt="new-hero-large"
-            </picture>
-        </div>
-
-        <section class="events-sec">
-            <h2>Events</h2>
-            <div class="events-container"></div>
+       <div class="contact-form">
+        <section class="cont-invite">
+            <h2>Contact Us</h2>
+            <p>
+                We welcome your supports! Contact us to learn more about Pep Sports Foundation, our initiatives, registrations and how you can help!
+            </p>
+            <p>info@pepsports.org</p>
+            <address>
+                Asamankese, Suhum Road<br>
+                Sukuntu, Asamankese<br>
+                (233) 555 595 354<br>
+            </address>
         </section>
+        <section class="form-sec">
+            <h2>Membership Registration Form</h2>
+            <form id="register" method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Child Information</legend>
+                    <label>First Name:*<input type="text" name="firstname" title="Enter child's first name" autocomplete="given-name" required></label>
+                    <label>Last Name:*<input type="text" name="lastname" title="Enter child's last name" autocomplete="family-name" required></label>
+                    <label>Date of Birth:*<input type="date" name="birthdate" required></label>
+                    <label for="sports">Choose a Sports
+                        <select id="sports" name="sports">
+                            <option>Select a sports</option>
+                            <option value="football">Football</option>
+                            <option value="basketball">Basketball</option>
+                            <option value="Volleyball">Volleyball</option>
+                            <option value="Swimming">Swimming</option>
+                            <option value="handball">Handball</option>
+                        </select>
+                    </label>
+                   
+                </fieldset>
+                <fieldset>
+                    <legend>Guardian Information</legend>
+                    <label>Full Name:*<input type="text" name="parent-fullname" title="Enter parent's full name" autocomplete="name" required></label>
+                    <label>Phone:*<input type="tel" name="phone" autocomplete="tel" required></label>
+                </fieldset>
+            
+                <button type="submit">Register</button>
+            </form>
+           </section>
+       </div>
     </main>
    
     <footer>
