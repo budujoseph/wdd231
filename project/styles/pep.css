@@ -226,6 +226,17 @@ footer {
     font-family: var(--heading-font);
 }
 
+.form-sec {
+    max-width: 500px;
+    width: 100%;
+    background-color: antiquewhite;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+    margin: 1rem auto;
+}
+
 .form-sec h2 {
     text-align: center;
     font-family: var(--heading-font);
@@ -240,13 +251,13 @@ footer {
 #register input[type="text"],
 #register input[type="date"],
 #register input[type="tel"],
+#register input[type="email"],
 #register select {
     display: block;
     padding: .75rem;
     background-color: lightgray;
     width: 100%;
     max-width: 400px;
-    color: black;
     border-radius: 5px;
 }
 
@@ -263,19 +274,57 @@ footer {
     padding: .8rem;
     display: block;
     margin: auto;
+    color: white;
+    border-radius: 8px 8px 0 0;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    text-align: center;
     max-width: 400px;
     width: 100%;
     border: none;
     cursor: pointer;
     font-family: var(--heading-font);
+    background-color: black;
+
 }
 
 #register legend {
     padding: .5rem;
-    color: blue;
     font-size: 1.2rem;
+    color: darkmagenta;
+}
+
+.thanks {
+    background-color: antiquewhite;
+    padding: .75rem;
+}
+
+.thanks h1 {
+    font-family: var(--heading-font);
+}
+
+.thanks p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.cont-invite article h2  {
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+.cont-invite article {
+    padding: .75rem;
+    text-align: left;
+}
+
+.cont-invite article p {
+    padding: .9rem;
+    line-height: 1.8;
 }
 
 
@@ -350,5 +399,30 @@ footer {
         align-items: center;
         flex-wrap: wrap;
         flex-grow: 1;
+    }
+
+    .contact-form {
+        display: flex;
+        justify-content: space-around;
+        gap: .5rem;
+    }
+
+    .cont-invite {
+       margin: 1rem;
+
+    }
+
+    .form-sec {
+        margin-right: 1rem;
+    }
+
+    #register button[type="submit"] {
+        max-width: 600px;
+    }
+
+    .cont-invite {
+        max-width: 700px;
+        width: 100%;
+
     }
 }

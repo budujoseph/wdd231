@@ -26,7 +26,7 @@ const eventsContainer = document.querySelector('.events-container');
         
         if (response.ok) {
             let data = await response.json();
-            console.log(data);
+            // console.log(data);
             displayEvents(data.events);
         } else {
             throw Error(await response.text());
@@ -77,6 +77,49 @@ const eventsContainer = document.querySelector('.events-container');
  }
 
  getEventsInfo();
+
+ const thankYouPage = window.location.href;
+//  console.log(thankYouPage);
+
+ const pageUrl = thankYouPage.split('?')[1].split('&');
+//  console.log(pageUrl);
+
+ const formInfo = document.getElementById('form-info');
+
+
+ function displayDetails(info) {
+    pageUrl.forEach((el) => {
+        if(el.startsWith(info)) {
+            result = el.split('=')[1].replace('+', ' ').replace('%40', '@');
+            
+        }
+
+        
+    });
+
+    return result
+ }
+
+
+displayDetails('');
+
+ 
+formInfo.innerHTML = `
+    <h2>Child's Information</h2>
+    <p>First Name: ${displayDetails('first')}</p>
+    <p>Last Name: ${displayDetails('last')}</p>
+    <p>Birth Date: ${displayDetails('birth')}</p>
+    <p>Sport: ${displayDetails('sports')}</p>
+    <hr>
+    <h2>Guardian Information</h2>
+    <p>Full name: ${displayDetails('parent')}</p>
+    <p>Phone Number: ${displayDetails('phone')}</p>
+    <p>Email: ${displayDetails('email')}</p>
+`
+
+
+ 
+ 
 
 
 
