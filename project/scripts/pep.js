@@ -1,4 +1,5 @@
 
+
 const hamburger = document.getElementById('trygram');
 const menuLinks = document.querySelector('#nav-animation');
 
@@ -116,6 +117,8 @@ formInfo.innerHTML = `
     <p>Phone Number: ${displayDetails('phone')}</p>
     <p>Email: ${displayDetails('email')}</p>
 `
+
+
 
 
  
