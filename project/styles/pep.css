@@ -106,6 +106,8 @@ nav ul li a:hover {
 
 .hero-items {
     position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .hero-items span {
@@ -382,7 +384,7 @@ footer {
     }
 
     .hero-items h1 {
-        /* font-size: 5rem; */
+        font-size: 3.5rem;
         max-width: 500px;
         width: 100%;
     }

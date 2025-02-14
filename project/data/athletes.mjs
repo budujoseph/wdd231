@@ -34,7 +34,7 @@ export const athletes = [
     {
         "name": "Frank Iga",
         "sport": "Football",
-        "age": 12,
+        "age": 8,
         "country": "Uganda",
         "imgUrl": ""
     },

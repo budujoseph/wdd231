@@ -9,7 +9,6 @@ h1{
     padding: 10px;
     border-radius: 10px;
     font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
@@ -18,7 +17,6 @@ p {
     color: black;
     font-size: 1.6rem;
     font-family: "Raleway", serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
