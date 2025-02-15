@@ -18,9 +18,7 @@ body {
     overflow-x: hidden;
 }
 
-* {
-    box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 
 .hero-img img {
     max-width: 100%;
@@ -402,6 +400,7 @@ footer {
         font-size: 3.5rem;
         max-width: 500px;
         width: 100%;
+        height: auto;
     }
 
     .events-container {
@@ -432,11 +431,7 @@ footer {
 
     #register button[type="submit"] {max-width: 600px; width: 100%;}
 
-    .cont-invite {
-        max-width: 700px;
-        width: 100%;
-
-    }
+    .cont-invite {max-width: 700px; width: 100%;}
 
     #athletes-container {
         display: grid;
@@ -445,9 +440,7 @@ footer {
         justify-content: center;
     }
 
-    .athletes-page h2 {
-        text-align: center;
-    }
+    .athletes-page h2 {text-align: center;}
 
     .sportbtn {
         text-align: center;
@@ -457,7 +450,5 @@ footer {
         gap: 3rem;
     }
 
-    .sportbtn button {
-        width: 120px;
-    }
+    .sportbtn button {width: 120px;}
 }
