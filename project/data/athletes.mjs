@@ -4,7 +4,7 @@ export const athletes = [
         "sport": "Football",
         "age": 18,
         "country": "Ghana",
-        "imgUrl": ""
+        "imgUrl": "./images/alex-kumi.webp"
     },
 
     {
@@ -12,7 +12,7 @@ export const athletes = [
         "sport": "Basketball",
         "age": 15,
         "country": "Ghana",
-        "imgUrl": ""
+        "imgUrl": "./images/emma-annor.webp"
     },
 
     {
@@ -20,7 +20,7 @@ export const athletes = [
         "sport": "Volleyball",
         "age": 14,
         "country": "Ethiopia",
-        "imgUrl": ""
+        "imgUrl": "./images/larbi.webp"
     },
 
     {
@@ -28,7 +28,7 @@ export const athletes = [
         "sport": "Basketball",
         "age": 14,
         "country": "South Africa",
-        "imgUrl": ""
+        "imgUrl": "./images/christiana.webp"
     },
 
     {
@@ -36,7 +36,7 @@ export const athletes = [
         "sport": "Football",
         "age": 8,
         "country": "Uganda",
-        "imgUrl": ""
+        "imgUrl": "./images/frank-iga.webp"
     },
 
     {
@@ -44,7 +44,7 @@ export const athletes = [
         "sport": "Football",
         "age": 13,
         "country": "Ghana",
-        "imgUrl": ""
+        "imgUrl": "./images/mavis.webp"
     },
 
     {
@@ -52,7 +52,7 @@ export const athletes = [
         "sport": "Volleyball",
         "age": 15,
         "country": "Ivory Ghost",
-        "imgUrl": ""
+        "imgUrl": "./images/sheila.webp"
     },
 
     {
@@ -60,15 +60,15 @@ export const athletes = [
         "sport": "Basketball",
         "age": 17,
         "country": "Nigeria",
-        "imgUrl": ""
+        "imgUrl": "./images/tariq.webp"
     },
 
     {
-        "name": "Braden Westons",
+        "name": "Branden Westons",
         "sport": "Football",
         "age": 19,
         "country": "USA",
-        "imgUrl": ""
+        "imgUrl": "./images/branden.webp"
     },
 
     {
@@ -76,7 +76,7 @@ export const athletes = [
         "sport": "Volleyball",
         "age": 15,
         "country": "Madagascar",
-        "imgUrl": ""
+        "imgUrl": "./images/mayden.webp"
     },
 
     

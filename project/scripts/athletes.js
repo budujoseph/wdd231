@@ -3,7 +3,7 @@ console.log(athletes);
 
 
 
-
+const allAthletes = document.querySelector('.all');
 const fballBtn = document.querySelector('.fball-btn');
 const bballBtn = document.querySelector('.bball-btn');
 const vballBtn = document.querySelector('.vball-btn');
@@ -45,4 +45,26 @@ displayAthletes(athletes);
 
 
 
+fballBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const fballers = athletes.filter(athlete => athlete.sport === 'Football');
+    displayAthletes(fballers);
+});
+
+bballBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const bballers = athletes.filter(athlete => athlete.sport === 'Basketball');
+    displayAthletes(bballers);
+});
+
+vballBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const vballers = athletes.filter(athlete => athlete.sport === 'Volleyball');
+    displayAthletes(vballers);
+});
+
+allAthletes.addEventListener('click', (event) => {
+    event.preventDefault();
+    displayAthletes(athletes);
+});
 
