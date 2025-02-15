@@ -30,10 +30,13 @@ picture {
     height: auto;
 }
 
+
+
 header {
     background-color: var(--body-text-color);
     height: auto;
     display: flex;
+    width: 100%;
 }
 
 nav {width: 100%;}
