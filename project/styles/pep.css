@@ -10,9 +10,12 @@
     --body-font: 'Raleway', serif;
 }
 
+
+
 body {
     background-color: var(--background-color);
     font-family: var(--body-font);
+    overflow-x: hidden;
 }
 
 * {
@@ -20,7 +23,7 @@ body {
 }
 
 .hero-img img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -30,9 +33,7 @@ header {
     display: flex;
 }
 
-nav {
-    width: 100%;
-}
+nav {width: 100%;}
 
 #trygram {
     font-size: 2rem;
@@ -56,9 +57,7 @@ ul.menu-navs li a {
     font-weight: 700;
 }
 
-ul.menu-navs {
-    list-style: none;
-}
+ul.menu-navs {list-style: none;}
 
 #trygram::before {
     content: "\2630";
@@ -184,14 +183,9 @@ dialog::backdrop {
 }
 
 @keyframes fadein {
-    0% {
+    0% {opacity: 0;}
 
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    100% { opacity: 1;}
 }
 
 footer {
@@ -215,9 +209,7 @@ footer {
     padding: 10px;
 }
 
-.media-links h4 {
-    text-align: center;
-}
+.media-links h4 {text-align: center;}
 
 .cont-invite {
     background-color: antiquewhite;
@@ -266,13 +258,9 @@ footer {
 }
 
 
-#register input:required {
-    border-bottom: 10px solid red;
-}
+#register input:required {border-bottom: 10px solid red;}
 
-#register input:required:valid {
-    border-bottom: 10px solid green;
-}
+#register input:required:valid {border-bottom: 10px solid green;}
 
 #register button[type="submit"] {
     padding: .8rem;
@@ -341,9 +329,7 @@ footer {
     font-family: var(--heading-font);
 }
 
-.athlete-card img {
-    width: 100%;
-}
+.athlete-card img {width: 100%;}
 
 .athletes-page button {
     padding: .65rem;
@@ -364,17 +350,11 @@ footer {
     width: 100%;
 }
 
-.athlete-card h3, p {
-    text-align: center;
-}
+.athlete-card h3, p {text-align: center;}
 
-.athlete-card h3 {
-    font-family: var(--heading-font);
-}
+.athlete-card h3 {font-family: var(--heading-font);}
 
-.athlete-card p {
-    font-family: var(--body-text-color);
-}
+.athlete-card p {font-family: var(--body-text-color);}
 
 .athlete-card {
     background-color: antiquewhite;
@@ -392,27 +372,9 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 44rem) {
     
-    nav {
-        max-width: 2000px;
-        width: 100%;
-        background: none;
-    }
+    nav {width: 100%;}
 
     #nav-animation ul.menu-navs {
         margin-top: -4rem;
@@ -424,14 +386,7 @@ footer {
         font-size: 1.2rem;
     }
 
-
-
- 
-
-    #trygram {
-        display: none;
-
-    }
+    #trygram {display: none;}
 
     ul.menu-navs,
     ul.menu-navs.show {
@@ -441,9 +396,7 @@ footer {
         gap: 4rem;
     }
 
-    nav {
-        grid-template-rows: 1fr;
-    }
+    nav {grid-template-rows: 1fr;}
 
     .hero-items h1 {
         font-size: 3.5rem;
@@ -473,18 +426,11 @@ footer {
         gap: .5rem;
     }
 
-    .cont-invite {
-       margin: 1rem;
+    .cont-invite {margin: 1rem;}
 
-    }
+    .form-sec {margin-right: 1rem;}
 
-    .form-sec {
-        margin-right: 1rem;
-    }
-
-    #register button[type="submit"] {
-        max-width: 600px;
-    }
+    #register button[type="submit"] {max-width: 600px; width: 100%;}
 
     .cont-invite {
         max-width: 700px;
