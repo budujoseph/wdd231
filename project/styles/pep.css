@@ -53,6 +53,7 @@ ul.menu-navs li a {
     padding: .75rem 2vw;
     color: white;
     padding: 10px;
+    font-weight: 700;
 }
 
 ul.menu-navs {
@@ -73,6 +74,7 @@ nav {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.5s ease-out;
+    background-color:rgb(35, 40, 40) ;
 }
 
 nav ul{overflow: hidden;}
@@ -143,8 +145,8 @@ nav ul li a:hover {
 .events-card .openDialog {
     padding: .75rem;
     border: none;
-    background-color: var(--body-text-color);
-    color: var(--heading-color);
+    background-color: #000000;
+    color: white;
     border-radius: 5px;
 
 }
@@ -329,6 +331,66 @@ footer {
     line-height: 1.8;
 }
 
+.athletes-page {
+    padding: .85rem;
+}
+
+.athletes-page h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--heading-font);
+}
+
+.athlete-card img {
+    width: 100%;
+}
+
+.athletes-page button {
+    padding: .65rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    cursor: pointer;
+    text-align: center;
+    margin: .5rem;
+    gap: 3rem;
+}
+
+.sportbtn {
+    text-align: center;
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.athlete-card h3, p {
+    text-align: center;
+}
+
+.athlete-card h3 {
+    font-family: var(--heading-font);
+}
+
+.athlete-card p {
+    font-family: var(--body-text-color);
+}
+
+.athlete-card {
+    background-color: antiquewhite;
+    padding: .25rem;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 5px black;
+    width: 100%;
+    max-width: 400px;
+}
+
+#athletes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 
 
 
@@ -428,5 +490,28 @@ footer {
         max-width: 700px;
         width: 100%;
 
+    }
+
+    #athletes-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .athletes-page h2 {
+        text-align: center;
+    }
+
+    .sportbtn {
+        text-align: center;
+        margin: .5rem;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .sportbtn button {
+        width: 120px;
     }
 }

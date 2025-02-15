@@ -12,7 +12,7 @@ function displayAthletes(athletes) {
     document.getElementById('athletes-container').innerHTML = '';
     athletes.forEach(athlete => {
         let athleteCard = document.createElement('div');
-        athleteCard.classList.add('athleteCard');
+        athleteCard.classList.add('athlete-card');
 
         let name = document.createElement('h3');
         let sports = document.createElement('p');
