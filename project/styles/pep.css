@@ -133,7 +133,7 @@ nav ul li a:hover {
 }
 
 .events-card {
-    background-color: rgb(225, 225, 195);
+    background-color: antiquewhite;
     text-align: center;
     padding: .75rem;
     max-width: 400px;
@@ -192,6 +192,34 @@ dialog::backdrop {
     0% {opacity: 0;}
 
     100% { opacity: 1;}
+}
+
+.cta-sec {
+    background-color: antiquewhite;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 8px 8px 0 0;
+    /* color: white; */
+}
+
+.cta-sec h2 {font-family: var(--heading-font);}
+
+.cta-sec p {
+    padding: .25rem;
+}
+
+.cta-sec a {
+    /* background-color: blue; */
+    padding: .75rem;
+    text-decoration: none;
+    background-color: black;
+    color: yellow;
+    font-weight: 700;
+    border-radius: 8px;
 }
 
 footer {
@@ -304,6 +332,7 @@ footer {
 
 .thanks p {
     font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
 }
 
 .contact-form {
@@ -324,6 +353,7 @@ footer {
 .cont-invite article p {
     padding: .9rem;
     line-height: 1.8;
+    text-align: left;
 }
 
 .athletes-page {
@@ -377,6 +407,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
 }
+
 
 
 @media screen and (min-width: 44rem) {
@@ -465,4 +496,8 @@ footer {
     }
 
     .sportbtn button {width: 120px;}
+
+    .cta-sec {
+        max-width: 95%;
+    }
 }
