@@ -279,11 +279,11 @@ footer {
     padding: 10px;
 }
 
-#register input[type="text"],
-#register input[type="date"],
-#register input[type="tel"],
-#register input[type="email"],
-#register select {
+#register-form input[type="text"],
+#register-form input[type="date"],
+#register-form input[type="tel"],
+#register-form input[type="email"],
+#register-form select {
     display: block;
     padding: .75rem;
     background-color: lightgray;
@@ -293,11 +293,11 @@ footer {
 }
 
 
-#register input:required {border-bottom: 10px solid red;}
+#register-form input:required {border-bottom: 10px solid red;}
 
-#register input:required:valid {border-bottom: 10px solid green;}
+#register-form input:required:valid {border-bottom: 10px solid green;}
 
-#register button[type="submit"] {
+#register-form button[type="submit"] {
     padding: .8rem;
     display: block;
     margin: auto;
@@ -315,7 +315,7 @@ footer {
 
 }
 
-#register legend {
+#register-form legend {
     padding: .5rem;
     font-size: 1.2rem;
     color: darkmagenta;
@@ -383,6 +383,8 @@ footer {
     text-align: center;
     margin: .5rem;
     display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
     justify-content: center;
     width: 100%;
 }
@@ -406,6 +408,52 @@ footer {
 #athletes-container {
     display: grid;
     grid-template-columns: 1fr;
+}
+
+.sub-form {
+    width: 100%;
+    max-width: 400px;
+    padding: .75rem;
+    color: white;
+    display: flex;
+    background-color: cadetblue;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+
+.sub-form h3 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 30px;
+}
+
+.sub-form span  {
+    font-size: 1.2rem;
+    margin-bottom: .2rem;
+    display: block;
+}
+
+.sub-form input[type="email"] {
+    display: block;
+    padding: .75rem;
+    border-radius: 8px;
+    background-color: lightgray;
+    width: 100%;
+    max-width: 30em;
+    margin: auto;
+}
+
+.sub-btn {
+    display: block;
+    margin: 1rem auto;
+    padding: .65rem;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 8px 0 8px 0;
+    background-color: rgb(165, 11, 42);
+    color: white;
+    border: none;
+    height: 2.5rem;
 }
 
 
@@ -474,7 +522,7 @@ footer {
 
     .form-sec {margin-right: 1rem;}
 
-    #register button[type="submit"] {max-width: 600px; width: 100%;}
+    #register-form button[type="submit"] {max-width: 600px; width: 100%;}
 
     .cont-invite {max-width: 700px; width: 100%;}
 
@@ -499,5 +547,13 @@ footer {
 
     .cta-sec {
         max-width: 95%;
+    }
+
+    .sub-form {
+        max-width: 95%;
+    }
+
+    .sub-form span {
+     
     }
 }
