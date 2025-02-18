@@ -415,9 +415,7 @@ footer {
     max-width: 400px;
     padding: .75rem;
     color: white;
-    display: flex;
-    background-color: cadetblue;
-    flex-direction: column;
+    background-color: rgb(42, 44, 44);
     margin: 1rem auto;
 }
 
@@ -429,8 +427,9 @@ footer {
 
 .sub-form span  {
     font-size: 1.2rem;
-    margin-bottom: .2rem;
+    margin-bottom: .3rem;
     display: block;
+    text-align: center;
 }
 
 .sub-form input[type="email"] {
@@ -454,6 +453,31 @@ footer {
     color: white;
     border: none;
     height: 2.5rem;
+    cursor: pointer;
+}
+
+.sub-thankyou h1 {
+     text-align: center;
+}
+
+.sub-thankyou {
+    background-color: #000000;
+    color: wheat;
+    padding: 3rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.sub-thankyou .returnBtn {
+    text-decoration: none;
+    background-color: antiquewhite;
+    padding: .75rem;
+    display: block;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
 }
 
 
@@ -550,10 +574,13 @@ footer {
     }
 
     .sub-form {
-        max-width: 95%;
+        max-width: 98%;
     }
 
-    .sub-form span {
-     
-    }
+   .sub-thankyou {max-width: 100%;}
+
+   .sub-thankyou .returnBtn {
+        max-width: 40rem;
+        margin: auto;
+   }
 }
