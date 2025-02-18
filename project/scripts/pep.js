@@ -118,13 +118,11 @@ formInfo.innerHTML = `
     <p>Email: ${displayDetails('email')}</p>
 `
 
+function saveSubEmail(event) {
+    event.preventDefault();
 
+    const subEmail = document.getElementById('sub-email').value;
+    localStorage.setItem("SubscribedEmail",subEmail);
+    window.location.href = "sub.html";
 
-
- 
- 
-
-
-
- 
-
+}
