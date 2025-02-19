@@ -91,7 +91,7 @@ const eventsContainer = document.querySelector('.events-container');
  function displayDetails(info) {
     pageUrl.forEach((el) => {
         if(el.startsWith(info)) {
-            result = el.split('=')[1].replace('+', ' ').replace('%40', '@');
+            result = el.split('=')[1].replaceAll('+', ' ').replace('%40', '@');
             
         }
 
