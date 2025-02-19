@@ -1,5 +1,5 @@
 import {athletes} from "../data/athletes.mjs";
-console.log(athletes);
+// console.log(athletes);
 
 
 
