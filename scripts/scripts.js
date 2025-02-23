@@ -99,6 +99,7 @@ courses[0].completed = true;  // mark CSE 110 as completed
 courses[1].completed = true;  // mark WDD 130 as completed
 courses[2].completed = true;  // mark CSE 111 as completed
 courses[4].completed = true;  // mark WDD 131 as completed
+courses[5].completed = true;  // mard WDD 231 as completed
 
 // DOM elements
 
