@@ -79,6 +79,38 @@ const eventsContainer = document.querySelector('.events-container');
 
  getEventsInfo();
 
+ // Intergration countries for users to select
+
+const countryApiPath = "https://restcountries.com/v3.1/all/";
+const countries = document.getElementById('countries');
+
+async function fetchCountries() {
+    try {
+        const response = await fetch(countryApiPath);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            displayCountries(data);
+        } else {
+            throw new Error("Error:", await response.text());
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+} 
+
+function displayCountries(data) {
+    const countryOptions = data
+    .sort((a, b) => a.name.common.localeCompare(b.name.common))
+    .map((country) => {
+        return `<option value=${country.name.common}>${country.name.common}</option>`
+    });
+
+    countries.innerHTML = countryOptions;
+}
+
+fetchCountries();
+
  const thankYouPage = window.location.href;
 //  console.log(thankYouPage);
 
@@ -111,6 +143,7 @@ formInfo.innerHTML = `
     <p>Last Name: ${displayDetails('last')}</p>
     <p>Birth Date: ${displayDetails('birth')}</p>
     <p>Sport: ${displayDetails('sports')}</p>
+    <p>Country: ${displayDetails('countries')}</p>
     <hr>
     <h2>Guardian Information</h2>
     <p>Full name: ${displayDetails('parent')}</p>
@@ -126,3 +159,4 @@ function saveSubEmail(event) {
     window.location.href = "sub.html";
 
 }
+
