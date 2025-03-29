@@ -547,9 +547,12 @@ footer {
         gap: .5rem;
     }
 
-    .cont-invite {margin: 1rem;}
+    .cont-invite {
+        margin: 1rem;
+        margin-left: 4rem;
+    }
 
-    .form-sec {margin-right: 1rem;}
+    .form-sec {margin-right: 5rem;}
 
     #register-form button[type="submit"] {max-width: 600px; width: 100%;}
 

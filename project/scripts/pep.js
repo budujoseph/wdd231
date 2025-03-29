@@ -100,12 +100,14 @@ async function fetchCountries() {
 } 
 
 function displayCountries(data) {
-    const countryOptions = data
-    .sort((a, b) => a.name.common.localeCompare(b.name.common))
-    .map((country) => {
-        return `<option value=${country.name.common}>${country.name.common}</option>`
-    });
+    let countryOptions = `<option value="">Select Your Country</option>`;
+    countryOptions += data
+        .sort((a, b) => a.name.common.localeCompare(b.name.common))
+        .map((country) => {
+            return `<option value=${country.name.common}>${country.name.common}</option>`;
+        })
 
+        .join("");
     countries.innerHTML = countryOptions;
 }
 
