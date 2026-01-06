@@ -13,8 +13,8 @@ function displaySpotlights(members) {
     );
 
     // console.log('These items are filtered:',filteredMembers);
-
-    const shuffleArray = array => array.sort(() => Math.random() - 0.5);
+    
+    const shuffleArray = array => array.sort(() => Math.random() - 0.5); 
     const selectedMembers = shuffleArray(filteredMembers).slice(0, 3);
     // console.log('These items are sliced:', selectedMembers);
 

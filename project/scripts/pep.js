@@ -81,7 +81,7 @@ const eventsContainer = document.querySelector('.events-container');
 
  // Intergration countries for users to select
 
-const countryApiPath = "https://restcountries.com/v3.1/all/";
+const countryApiPath = "https://restcountries.com/v3.1/all";
 const countries = document.getElementById('countries');
 
 async function fetchCountries() {
@@ -123,7 +123,7 @@ fetchCountries();
 
 
  function displayDetails(info) {
-    pageUrl.forEach((el) => {
+     pageUrl.forEach((el) => {
         if(el.startsWith(info)) {
             result = el.split('=')[1].replaceAll('+', ' ').replace('%40', '@');
             

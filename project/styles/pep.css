@@ -293,9 +293,9 @@ footer {
 }
 
 
-#register-form input:required {border-bottom: 10px solid red;}
+#register-form input:required {border-bottom: 5px solid red;}
 
-#register-form input:required:valid {border-bottom: 10px solid green;}
+#register-form input:required:valid {border-bottom: 5px solid green;}
 
 #register-form button[type="submit"] {
     padding: .8rem;
